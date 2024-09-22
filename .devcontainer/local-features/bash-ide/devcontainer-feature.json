@@ -1,0 +1,45 @@
+{
+    "id": "bash-ide",
+    "version": "0.1.0",
+    "name": "Bash IDE",
+    "description": "Installs required dependencies for the Bash IDE extension.",
+    "options": {
+        "shellcheckVersion": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "v0.10.0"
+            ],
+            "default": "latest",
+            "description": "The version of shellcheck to install. Use 'latest' to get the latest version."
+        },
+        "shfmtVersion": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "v3.9.0"
+            ],
+            "default": "latest",
+            "description": "The version of shfmt to install. Use 'latest' to get the latest version."
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "timonwong.shellcheck",
+                "mads-hartmann.bash-ide-vscode",
+                "rpinski.shebang-snippets"
+            ],
+            "settings": {
+                "bashIde.shellcheckPath": "",
+                "shellcheck.useWorkspaceRootAsCwd": true,
+                "shellcheck.customArgs": [
+                    "--external-sources"
+                ]
+            }
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

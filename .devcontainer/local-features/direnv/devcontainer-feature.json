@@ -1,0 +1,17 @@
+{
+    "id": "direnv",
+    "version": "0.1.0",
+    "name": "direnv",
+    "description": "Installs required dependencies for the direnv extension.",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mkhl.direnv"
+            ],
+            "settings": {}
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

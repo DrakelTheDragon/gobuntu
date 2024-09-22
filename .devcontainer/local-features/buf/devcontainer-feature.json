@@ -1,0 +1,28 @@
+{
+    "id": "buf",
+    "version": "0.1.0",
+    "name": "Buf",
+    "description": "Installs required dependencies for the Buf extension.",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": [
+                "latest",
+                "v1.41.0"
+            ],
+            "default": "latest",
+            "description": "The version of buf to install. Use 'latest' to get the latest version."
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bufbuild.vscode-buf"
+            ],
+            "settings": {}
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

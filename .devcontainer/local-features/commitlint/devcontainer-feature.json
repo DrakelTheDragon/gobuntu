@@ -1,0 +1,15 @@
+{
+    "id": "commitlint",
+    "version": "0.1.0",
+    "name": "commitlint",
+    "description": "Installs commitlint in the devcontainer.",
+    "customizations": {
+        "vscode": {
+            "extensions": []
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/node"
+    ]
+}
